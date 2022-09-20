@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Tour</title>
+    
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <style>
+        .header-section{
+            background: linear-gradient(to bottom, rgba(89, 183, 205, 0.6), rgba(67, 113, 220, 0.6)),url('https://images.pexels.com/photos/238622/pexels-photo-238622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 0%;
+            position: relative;
+            top: 0%;
+            background-position: center center;
+            clip-path:polygon(0 0, 100% 0, 100% 75%, 0% 100%) ;
+            height: 100vh;
+            width: 100%;
+            z-index: -1;
+            text-align: center;
+            display: flex;
+        }
+        .section3-container{
+            background: linear-gradient(to bottom, rgba(89, 183, 205, 0.6), rgba(67, 113, 220, 0.6)),url('./img\ copy/nat-4.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            clip-path: polygon(100% 0, 100% 71%, 0 100%, 0 33%);
+            height: 100vh;
+            width: 100%;
+            z-index: -1;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .header-section-sub{   
+            align-self: center;
+            margin-left: 33.33%;
+            margin: auto;
+        }
+        .header-section-sub h1{
+                color: white;
+                text-align: center;
+                font-size: 50px;
+                letter-spacing: 30px;
+                z-index: 1;
+        }
+        .header-section-sub h3{
+            color: navy;
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 15px;
+            z-index: 1;
+        }
+        #a1{
+            background-color: white;
+            color: black;
+            height: 50px;
+            width: 50px;
+            border: none;
+            border-radius: 70%;
+            position: fixed;
+            top: 0%;
+            right: 1%;
+            z-index: 1;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        
+        .section2-container{
+            width: 100%;
+        }
+        .section2-container h1{
+            text-align: center;
+            color: green;
+        }
+        .section2-container h1:hover{
+                transform: rotate(-10deg);
+                font-style: oblique;
+        }
+        .section2-sub-container{
+            display: flex;
+        }
+        .secttion2-left{
+            text-align: start;
+            flex: 1;
+            text-align: start;
+            margin-left: 25px;
+            color: gray;
+        }
+        .secttion2-right{
+            flex: 1;
+            margin-left:30px;
+            box-sizing: border-box;
+        }
+        .secttion2-left button{
+            border: none;
+            border-bottom: 5px solid green;
+            background-color: white;
+            height: 50px;
+            font-weight: bolder;
+            font-size: medium;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .secttion2-left button:hover{
+            background-color: green;
+            color: white;
+        }
+        #pic1{
+                max-height: 250px;
+                max-width: 300px;
+                position: relative;
+                top: 70px;
+                left: 70px;
+                z-index: 1;
+                transition-property: all;
+        }
+        #pic2{
+                max-height: 250px;
+                max-width: 300px;
+                position: relative;
+                top: 150px;
+                right: 150px;
+                z-index: 1;
+                transition-property: all;
+        }
+        #pic3{
+                max-height: 250px;
+                max-width: 300px;
+                position: relative;
+                top: 100px;
+                right: 300px;
+                z-index: 1;
+                transition-property: all;
+        }
+        .pics-hover:hover{
+                border: 10px solid green;
+                z-index: 1;
+                padding: 10px;
+        }
+        .sec3{
+            width: 250px;
+            height: 300px;
+            opacity: 0.5;
+            background-color: white;
+            transition: all;
+            margin: auto;
+        }
+        .sec3:hover{
+            width: 255px;
+            height: 320px;
+            opacity: 1;
+            background-color: rgba(67, 113, 220, 0.6);
+        }
+
+        /* //-->// */
+        .section4-container{
+            display: flex;
+            justify-content: space-around;
+        }
+        .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+.header-section-sub button{
+    border-radius: 30px;
+            width: 180px;
+            height: 50px; 
+            position: relative;
+}
+.header-section-sub button:hover{
+    width: 220px;
+            height: 60px;
+            background-color: skyblue;
+            color: white;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 470px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-card-front img{
+    clip-path:polygon(0 0, 100% 0, 100% 75%, 0% 100%) ;
+    opacity: 0.4;
+}
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  background: linear-gradient(to bottom,lightgreen,green);
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back button{
+    height: 50px;
+    width: 50%;
+    border-radius: 30px;
+    margin-top: 200px;
+}
+.flip-card-back h1{
+    font-size: 50px;
+    font-weight: lighter;
+}
+.flip-card-back h5{
+    font-size: 25px;
+    font-weight: lighter;
+}
+.fp-2{
+    background: linear-gradient(to bottom,orange,orangered);
+  color: white;
+  transform: rotateY(180deg);
+}
+.fp-3{
+    background: linear-gradient(to bottom,blue, skyblue);
+  color: white;
+  transform: rotateY(180deg);
+}.button2{
+    position: relative;
+    margin-top: 250px;
+    left: 45%;
+    border-radius: 30px;
+            width: 220px;
+            height: 50px;         
+            transition-property: all;
+            transition-duration: 0.5s;
+}
+.button2:hover{
+    height: 60px;
+            background-color: green;
+            color: white;
+}
+#myvideo{
+    height: 100vh;
+    margin-top: 50px;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+ .hover-video-2:hover{
+        color: white;
+        background-color: green;
+ }  
+ .hover-video-1:hover{
+    transform: rotate(-10deg);
+ }
+ .fot{
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 20px;
+   
+    transition: all;
+ }
+ .fot:hover{
+        color: green;
+         transform: rotate(-20deg);
+ }
+
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <h4 id="a1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg></h4>
+        <div class="header-section-sub">
+            
+            <h1>Out Doors</h1>
+            <h3>is where life happens</h3>
+            <button id="bt123">DISCOVER OUR TOURS</button>
+        </div>
+    </div>
+    <div class="section2-container">
+                <h1 >EXCITING TOURS FOR ADVENTUROUS PEOPLE</h1>
+                <div class="section2-sub-container">
+                    <div class="secttion2-left">
+                        <h2>YOU ARE GOING TO HATE THE DEADLY AND CRUEL NATURE</h2>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maiores temporibus tempore similique atque nobis voluptatem velit! Nisi ut eveniet quaerat et veritatis ipsum fugit aliquid officiis eos tenetur perspiciatis excepturi omnis in quo eum, accusantium itaque, rerum porro doloremque, autem voluptatem at quos? Aliquid, amet? Cum, molestiae veniam? Consequatur.</P>
+                        <br/>
+                        <br>
+                        <h2>PREPARE TO DIE IN THE MOTHER NATURE</h2>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maiores temporibus tempore similique atque nobis voluptatem velit! Nisi ut eveniet quaerat et veritatis ipsum fugit aliquid officiis eos tenetur perspiciatis excepturi omnis in quo eum, accusantium itaque, rerum porro doloremque, autem voluptatem at quos? Aliquid, amet? Cum, molestiae veniam? Consequatur.</P>
+                        <button>Learn more --></button>
+                    </div>
+                    <div class="section2-right">
+                        <img id="pic1" class="pics-hover" src="./img copy/nat-1-large.jpg" alt="nature">
+                         <img id="pic2" class="pics-hover" src="./img copy/nat-2-large.jpg" alt="prakruthi">
+                        <img id="pic3" class="pics-hover" src="./img copy/nat-3-large.jpg" alt="adavi"> 
+                    </div>
+                </div>
+               
+    </div>
+    <div class="section3-container">
+        <div class="sec3">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit?</p>
+        </div>
+        <div class="sec3">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit?</p>
+        </div>
+        <div class="sec3">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit?</p>
+
+        </div>
+        <div class="sec3">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit?</p>
+
+        </div>
+    </div>
+
+    <div class="section4-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id="p1" src="./img copy/nat-5.jpg" alt="mountain" style="width:300px;height:250px;">
+                    <br>
+                    <h3>7 day Tour</h3>
+                    <h3>only YOU</h3>
+                    <h3>7 Tour guides</h3>
+                    <h3>sleeping with forest lions</h3>
+                    <h3>Difficulty: medium</h3>
+
+                  </div>
+                  <div class="flip-card-back fp-2">
+                    <h5>Only </h5> 
+                    <h1>$ 699</h1> 
+                    <button>Book Now</button>
+                  </div>
+                </div>
+               </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id="p2" src="./img copy/nat-6.jpg" alt="snow" style="width:300px;height:250px;">
+                    <br>
+                    <h3>7 day Tour</h3>
+                    <h3>only YOU</h3>
+                    <h3>7 Tour guides</h3>
+                    <h3>sleeping with forest lions</h3>
+                    <h3>Difficulty: medium</h3>
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Only </h5> 
+                    <h1>$ 799</h1> 
+                    <button>Book Now</button>
+                  </div>
+                </div>
+              </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id="p3" src="./img copy/nat-7.jpg" alt="nature" style="width:300px;height:250px;">
+                    <br>
+                    <h3>7 day Tour</h3>
+                    <h3>only YOU</h3>
+                    <h3>7 Tour guides</h3>
+                    <h3>sleeping with forest lions</h3>
+                    <h3>Difficulty: medium</h3>
+                  </div>
+                  <div class="flip-card-back fp-3">
+                    <h5>Only </h5> 
+                    <h1>$ 299</h1> 
+                    <button>Book Now</button>
+                  </div>
+                  
+                </div>
+              </div>
+    </div>
+    <button class="button2">DISCOVER ALL OUR TOURS</button>
+    <br>
+    <div class="section5-container">
+            <video autoplay unmuted loop id="myvideo" >
+                <source  src="./img copy/video.webm" type="video/mp4">
+              </video>
+              <div class="review-container" style="margin-left: 250px; display: flex; flex-direction: column; position: absolute; top: 2800px;  ">
+                    <h1 class="hover-video-1" style="margin-left: 250px; color: green;" >WE MAKE PEOPLE GENIUNELY HAPPY</h1>
+                <div style="display: flex; flex-direction: row; width: 60%; height: 400px; clip-path: (19% 0, 100% 0, 75% 100%, 0% 100%); z-index: 1; height: 300px; margin-top: 100px; margin-left: 100px; ">
+                        <img src="./img copy/nat-8.jpg" alt="" style="width: 200px; height:200px; border-radius: 50%;">
+                        <div style="margin-left: 50px;">
+                            <h2 style="color: green;">WORST EXPERIENCE DONT CHOOSE THIS TOURISM!!!</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores dolorum assumenda nostrum nemo doloribus consequuntur at nihil? Dicta molestiae velit voluptatem doloremque ipsa similique quidem assumenda adipisci aspernatur vel inventore commodi labore amet eveniet earum nostrum illo quod dolor fuga, totam expedita! Sapiente doloremque pariatur et possimus odit! Ipsa, enim.</p>
+                        </div>
+                </div>
+                <div style="display: flex; flex-direction: row; width: 60%; height: 400px; clip-path: (19% 0, 100% 0, 75% 100%, 0% 100%); z-index: 1; height: 300px; margin-left: 100px;">
+                    <img src="./img copy/nat-9.jpg" alt="" style="width: 200px; height:200px;  border-radius: 50%;">
+                    <div style="margin-left: 50px;">
+                        <h2 style="color: green;">WORST EXPERIENCE DONT CHOOSE THIS TOURISM!!!</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores dolorum assumenda nostrum nemo doloribus consequuntur at nihil? Dicta molestiae velit voluptatem doloremque ipsa similique quidem assumenda adipisci aspernatur vel inventore commodi labore amet eveniet earum nostrum illo quod dolor fuga, totam expedita! Sapiente doloremque pariatur et possimus odit! Ipsa, enim.</p>
+                        <button class="hover-video-2" style="height: 50px; width:100px; border-radius: 10px; opacity: 0.5; margin-left: 50px; border-bottom: 3px solid green;">more reviews</button>
+                    </div>
+                </div>
+                
+              </div>
+              
+    </div>
+    <div style="height: 100vh; width:100%; background: linear-gradient(to bottom,lightgreen,green); z-index: -1;">
+        <div style="height: 180px;"></div>       
+        <div style="width: 80%; height:450px; background-image: url('./img copy/nat-7.jpg'); margin: auto; opacity: 1;">
+        </div>
+        <div style="position: absolute; top: 3760px; background-color: white; opacity: 0.5; clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%); height: 450px; margin-left: 150px;">
+            <h1 style="color:green; font-weight: bolder; font-size: 50px; margin-left: 25px;">start booking now</h1>
+        <form action="" style="height:300px; width:500px; margin-left: 50px; ">
+            <label for="name" style="color: black;">name</label>
+            <br>
+            <input style="height:30px; width:180px; z-index: 1; background-color: white; color: black; border-bottom: 5px solid green;" value="name" type="string" name="name"/>
+            <br>
+            <label for="email" style="color: black;">email</label>
+            <br>
+            <input style="height:30px; width: 180px ; z-index: 1; border-bottom: 5px solid green;" type="email" name="email" id="email">
+            <br>
+            <br>
+            <input type="radio" ><label style="font-size:larger ;">small group</label>
+            <br>
+            <br>
+            <input type="radio" name="" id=""><label style="font-size:larger ;" >large group</label>
+            <br>
+            <button class="hover-video-2" style="height: 50px; width:100px; border-radius: 10px; opacity: 0.5; margin-left: 50px; border-bottom: 3px solid green; margin-top: 50px;">Submit</button>
+        </form>
+        </div>
+    </div>
+    <footer style="background-color: grey;" >
+        <img style="text-align:center; background-color:grey; margin-left: 40%;" src="./img copy/logo-green-1x.png" alt="">
+        <div style="display: flex;">
+            <p class="fot">company</p>
+            <p class="fot">contact us</p>
+            <p class="fot">carrers</p>
+            <p class="fot">terms</p>
+            <p class="fot">loans</p>
+        </div>
+    </footer>
+</body>
+</html>
